@@ -1,0 +1,415 @@
+/* ====== Estilos Generales ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* ====== Navegación ====== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #628f92;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar img {
+    height: 50px; /* Tamaño pequeño */
+    width: auto;
+    margin-right: 1rem;
+    border-radius: 4px;
+  }
+
+.logo {
+    display:inline-block;
+    width: auto;
+    height: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: background 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+
+
+/* ====== Botón de Menú (para móviles) ====== */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ====== Secciones ====== */
+.seccion {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+#inicio {
+    background-color: #93AFEC;
+    color: white;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* ====== Footer ====== */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+/* ====== Responsive Design ====== */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 200px;
+    }
+
+    .nav-links li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+/* ====== Estilos Generales ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+/* ====== Secciones ====== */
+.seccion {
+    padding: 60px 20px;
+    background-color: #E7EDDE;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+/* ====== Espacios Publicitarios ====== */
+.anuncio {
+    background-color: #ddd;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.anuncio-grande {
+    background-color: #ccc;
+    padding: 30px;
+    font-size: 20px;
+}
+
+/* ====== Estilos del Mapa ====== */
+.mapa iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+/* ====== Footer con Icono de Facebook ====== */
+footer {
+    background-color: #628f92;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 50px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* ====== Responsive Design ====== */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 200px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .carousel {
+      position: relative;
+      width: 87vw;
+      max-width: 700px;
+      height: 445px;
+      overflow: hidden;
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.9);
+      background: #222;
+    }
+
+    .carousel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      border-radius: 15px;
+    }
+
+    .carousel img.active {
+      opacity: 1;
+      position: relative;
+    }
+
+    .image-container1{
+      width: 380px;
+      height: 230px;
+      border: 2px solid #333;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      border-radius: 6px;
+    }
+    .image-container1 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+  
+  .image-container {
+    width: 370px;
+    height: 220px;
+    border: 2px solid #444;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .image-container2 {
+    width: 400px;
+    height: 100x;
+    border: 2px solid #444;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  .image-container2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+ .antes{
+    width: 240px;
+    height: 240px;
+ }
+
+ .Despues{
+  width: 255px;
+  height: 255px
+ }
+
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+  :root {
+    --bg-color: #ffffff;
+    --text-color: #111827;
+    --body-gray: #6b7280;
+    --card-radius: 0.75rem;
+    --card-shadow: rgba(0, 0, 0, 0.05);
+    --card-shadow-hover: rgba(0, 0, 0, 0.12);
+    --highlight-border: #2563eb; /* Blue-600 */
+    --transition-time: 0.3s;
+    --max-container-width: 1200px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+
+  main {
+    max-width: var(--max-container-width);
+    width: 100%;
+  }
+
+  .collage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .card {
+    position: relative;
+    border-radius: var(--card-radius);
+    box-shadow: 0 4px 8px var(--card-shadow);
+    overflow: hidden;
+    cursor: pointer;
+    user-select: none;
+    transition:
+      box-shadow var(--transition-time) cubic-bezier(0.4, 0, 0.2, 1),
+      transform var(--transition-time) cubic-bezier(0.4, 0, 0.2, 1),
+      border-color var(--transition-time);
+    border: 3px solid transparent;
+    outline-offset: 4px;
+  }
+
+  .card:hover,
+  .card:focus-visible {
+    box-shadow: 0 8px 20px var(--card-shadow-hover);
+    transform: scale(1.03);
+    border-color: var(--highlight-border);
+    outline: none;
+  }
+
+  .card.active {
+    border-color: var(--highlight-border);
+    box-shadow: 0 10px 24px var(--card-shadow-hover);
+    transform: scale(1.05);
+  }
+
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Asymmetric grid item sizes for interest */
+  /* Larger cards */
+  .card.lg {
+    grid-column: 20px;
+    grid-row: 20px;
+  }
+
+  @media (max-width: 700px) {
+    .card.lg {
+      grid-column: span 1 !important;
+      grid-row: span 1 !important;
+    }
+  }
+
+  /* Focus visible for accessibility */
+  .card:focus-visible {
+    outline: 3px solid var(--highlight-border);
+    outline-offset: 3px;
+  }
